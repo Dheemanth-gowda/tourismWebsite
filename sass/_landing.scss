@@ -42,8 +42,8 @@
     animation-delay: .1s;
     animation-fill-mode: both;
     h1 {
-        font-size: px-to-rm(48px);
-        margin-bottom: px-to-rm(16px);
+        font-size: px-to-rem(48px);
+        margin-bottom: px-to-rem(16px);
         animation-name: intro-header;
         animation-duration: 1s;
         animation-delay: .1s;
@@ -58,7 +58,7 @@
         background-color: white;
         padding: .6em 4.2em;
         border-radius: 4px;
-        margin-top: px-to-rm(14px);
+        margin-top: px-to-rem(14px);
         &:hover {
             opacity: .8;
         }

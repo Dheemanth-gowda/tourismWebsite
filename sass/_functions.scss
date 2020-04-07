@@ -2,7 +2,7 @@
     @return '../images/#{$img}';
 }
 
-@function px-to-rm($size) {
+@function px-to-rem($size) {
     $value: $size/16px;
     @return #{$value}rem;
 }
