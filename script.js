@@ -31,10 +31,30 @@ function closeForm() {
 }
 
 
-var x = setInterval(function() {
+(function manageTotalUsers() {
 
-    let count = 2000;
-    count = count + 1;
-    now = now - count;
-    document.getElementById("userCount").innerHTML = now;
-}, 500)
+    let totalUsers = String(getRandom(100000, 200000));
+    totalUsers = addComma(totalUsers);
+
+    addToTotalUsers(totalUsers);
+
+    function addToTotalUsers(currentValue) {
+        let num = Number(currentValue.replace(",", ""));
+        num++;
+        num = String(num);
+        num = addComma(num);
+        $("#userCount").html(num);
+        setTimeout(function() {
+            addToTotalUsers(num);
+        }, getRandom(100, 2000));
+    }
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    function addComma(num) {
+        return num.slice(0, 3) + "," + num.slice(3, 6);
+    }
+
+})();
