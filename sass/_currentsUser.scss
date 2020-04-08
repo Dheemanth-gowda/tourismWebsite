@@ -1,0 +1,23 @@
+#current-users {
+    padding-top: px-to-rem(30px);
+    color: white;
+    align-items: center;
+    width: 60%;
+    margin: 50px auto;
+    article {
+        display: flex;
+        justify-content: center;
+        border-top: 2px $faint-white solid;
+        border-bottom: 2px $faint-white solid;
+        box-sizing: border-box;
+    }
+    header h4 {
+        font-size: px-to-rem(35px);
+        padding: px-to-rem(20px);
+    }
+    h4:nth-last-child(1) {
+        font-size: px-to-rem(50px);
+        font-weight: bold;
+        text-align: center;
+    }
+}
